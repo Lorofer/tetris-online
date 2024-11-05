@@ -1,12 +1,13 @@
 <script setup lang="ts">
-import DefaultHeader from '@/components/DefaultHeader.vue'
-import MainMenu from "@/components/MainMenu.vue";
+
+import DefaultHeader from "@/components/DefaultHeader.vue";
+import OnlinePlayers from "@/components/OnlinePlayers.vue";
 </script>
 
 <template>
-  <DefaultHeader />
+  <DefaultHeader/>
   <main>
-    <MainMenu />
+    <OnlinePlayers/>
   </main>
 </template>
 

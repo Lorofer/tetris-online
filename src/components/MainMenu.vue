@@ -8,7 +8,7 @@
 </template>
 
 <style scoped lang="scss">
-@import "@/assets/base.scss";
+@import "@/assets/base";
 .menu-container{
   width: 352px;
   height: 384px;

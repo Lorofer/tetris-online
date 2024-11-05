@@ -1,0 +1,92 @@
+{
+  "players": [
+    {
+      "nickname": "Gamer123",
+      "status": "online"
+    },
+    {
+      "nickname": "ShadowMaster",
+      "status": "playing"
+    },
+    {
+      "nickname": "HappyPlayer",
+      "status": "offline"
+    },
+    {
+      "nickname": "CoolDude",
+      "status": "online"
+    },
+    {
+      "nickname": "EpicGamer",
+      "status": "playing"
+    },
+    {
+      "nickname": "NoobSlayer",
+      "status": "offline"
+    },
+    {
+      "nickname": "StealthyNinja",
+      "status": "online"
+    },
+    {
+      "nickname": "DragonWarrior",
+      "status": "playing"
+    },
+    {
+      "nickname": "PixelArtist",
+      "status": "offline"
+    },
+    {
+      "nickname": "MightyWizard",
+      "status": "online"
+    },
+    {
+      "nickname": "QuestSeeker",
+      "status": "playing"
+    },
+    {
+      "nickname": "SpaceCadet",
+      "status": "offline"
+    },
+    {
+      "nickname": "Thund3rCat",
+      "status": "online"
+    },
+    {
+      "nickname": "SilentAssassin",
+      "status": "playing"
+    },
+    {
+      "nickname": "TechGuru",
+      "status": "offline"
+    },
+    {
+      "nickname": "FrostyKnight",
+      "status": "online"
+    },
+    {
+      "nickname": "SilentAssassin",
+      "status": "playing"
+    },
+    {
+      "nickname": "TechGuru",
+      "status": "offline"
+    },
+    {
+      "nickname": "FrostyKnight",
+      "status": "online"
+    },
+    {
+      "nickname": "SilentAssassin",
+      "status": "playing"
+    },
+    {
+      "nickname": "TechGuru",
+      "status": "offline"
+    },
+    {
+      "nickname": "FrostyKnight",
+      "status": "online"
+    }
+  ]
+}

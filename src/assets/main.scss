@@ -1,3 +1,5 @@
+@import "base.scss";
+
 *,
 *::before,
 *::after {
@@ -9,4 +11,10 @@
   font-weight: normal;
   font-family: Inter, serif;
   text-decoration: none;
+}
+main{
+  min-height: calc(100vh - $header-height);
+}
+li{
+  list-style-type: none;
 }
