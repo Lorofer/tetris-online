@@ -14,7 +14,7 @@ import Logo from '@/components/Logo.vue'
 @import "@/assets/base";
 header{
   width: 100%;
-  height: $header-height;
+  height: var(--header-height);
   border-bottom: 2px $separator-grey solid;
 
   display: flex;

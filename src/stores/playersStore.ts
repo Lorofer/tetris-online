@@ -8,7 +8,7 @@ export const usePlayersStore = defineStore('players', () => {
         computed(() => playersObj.value.filter(player => player['status'] != "offline"));
 
     (async function getData() {
-        let resp = await fetch('https://my-json-server.typicode.com/Lorofer/tetris-online/players');
+        let resp = await fetch('http://localhost:3000/players');
         playersObj.value = await resp.json();
     })();
 

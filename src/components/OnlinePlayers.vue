@@ -6,7 +6,7 @@ const playersStore = usePlayersStore();
 <template>
 <div class="online-players-container">
   <div class="online-players-header">
-    <img src="@/assets/online-players.svg" alt="">
+<!--    <img src="@/assets/online-players.svg" alt="">-->
     <p>Игроки онлайн</p>
   </div>
   <ul class="online-players-list">
@@ -37,6 +37,10 @@ const playersStore = usePlayersStore();
   background-color: $bg-beige;
   border-radius: 24px;
   padding: 32px;
+
+  @media screen and (max-height: 960px){
+    height: 550px;
+  }
 }
 
 .online-players-header {

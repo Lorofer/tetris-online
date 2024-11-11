@@ -13,7 +13,7 @@
   text-decoration: none;
 }
 main{
-  min-height: calc(100vh - $header-height);
+  min-height: calc(100vh - var(--header-height));
 }
 li{
   list-style-type: none;
