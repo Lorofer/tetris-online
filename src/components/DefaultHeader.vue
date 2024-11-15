@@ -21,7 +21,7 @@ header{
   justify-content: center;
   align-items: center;
 }
-@media screen and (max-height: 960px){
+@media screen and (max-height: 700px){
   header{
     height: 80px;
   }

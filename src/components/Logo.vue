@@ -14,7 +14,7 @@
   img{
     height: 78px;
   }
-  @media screen and (max-height: 960px){
+  @media screen and (max-height: 700px){
     width: 155px;
     height: 67px;
     img{
