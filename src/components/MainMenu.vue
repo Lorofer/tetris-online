@@ -3,12 +3,13 @@
   <RouterLink class="button" to="/pvp">Играть 1 vs 1</RouterLink>
   <RouterLink class="button" to="/single-player">Одиночная игра</RouterLink>
   <span class="separator"></span>
-  <button class="button">Войти</button>
+  <button class="button" @click="$emit('open-popup')">Войти</button>
 </div>
 </template>
 
 <style scoped lang="scss">
 @import "@/assets/base";
+
 .menu-container{
   width: 352px;
   height: 384px;
@@ -18,19 +19,9 @@
   border-radius: 24px;
 }
 .button{
-  width: 256px;
-  height: 48px;
-  border-radius: 16px;
+  @include menu-button;
   background-color: $bg-blue;
-
   color: $text-blue;
-  font-size: 24px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  cursor: pointer;
 }
 .button:first-child{
   background-color: $bg-orange;
@@ -38,9 +29,7 @@
   font-weight: 300;
 }
 .separator{
-  width: 256px;
-  height: 2px;
-  display: block;
+  @include separator;
   background-color: $bg-blue;
 }
 .menu-container > *:not(:first-child){

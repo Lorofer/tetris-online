@@ -14,11 +14,16 @@ import Logo from '@/components/Logo.vue'
 @import "@/assets/base";
 header{
   width: 100%;
-  height: var(--header-height);
+  height: 100px;
   border-bottom: 2px $separator-grey solid;
 
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-height: 960px){
+  header{
+    height: 80px;
+  }
 }
 </style>
