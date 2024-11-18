@@ -10,10 +10,11 @@
     "test:unit": "vitest",
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
-    "server": "json-server -w db.json"
+    "server": "json-server-auth server/db.json -r server/routes.json"
   },
   "dependencies": {
-    "json-server": "^1.0.0-beta.3",
+    "express": "^4.21.1",
+    "json-server": "^0.17.3",
     "pinia": "^2.2.4",
     "vue": "^3.5.12",
     "vue-router": "^4.4.5"
@@ -27,6 +28,7 @@
     "@vue/tsconfig": "^0.5.1",
     "concurrently": "^9.1.0",
     "jsdom": "^25.0.1",
+    "json-server-auth": "^2.1.0",
     "npm-run-all2": "^6.2.3",
     "sass": "^1.80.3",
     "typescript": "~5.5.4",

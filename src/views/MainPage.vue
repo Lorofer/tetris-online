@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import DefaultHeader from '@/components/DefaultHeader.vue'
 import MainMenu from "@/components/MainMenu.vue";
-import SignUpPopup from "@/components/SignUpPopup.vue";
+import SignUpPopup from "@/components/SignInPopup.vue";
 
 import {useTemplateRef} from "vue";
 

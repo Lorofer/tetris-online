@@ -1,16 +1,18 @@
 <script setup lang="ts">
 import { usePlayersStore } from "@/stores/playersStore"
 const playersStore = usePlayersStore();
+
+async function foo(){}
 </script>
 
 <template>
 <div class="online-players-container">
   <div class="online-players-header">
-<!--    <img src="@/assets/online-players.svg" alt="">-->
+    <img src="@/assets/online-players.svg" alt="">
     <p>Игроки онлайн</p>
   </div>
   <ul class="online-players-list">
-    <li class="online-players-list-item" v-for="player in playersStore.onlinePlayers">
+    <li class="online-players-list-item" v-for="player in playersStore.playersObj">
       <p class="online-players-list-nickname">{{ player['nickname'] }}</p>
       <button
           :class="[
@@ -20,6 +22,7 @@ const playersStore = usePlayersStore();
                 'playing': player['status'] == 'playing'
               }
           ]"
+          v-on="player['status'] == 'online' ? {'click': foo} : {}"
       >
         {{ player['status'] == 'online' ? 'Пригласить' : 'Играет' }}
       </button>
@@ -77,11 +80,11 @@ const playersStore = usePlayersStore();
       height: 24px;
       border-radius: 4px;
       font-size: 16px;
-      cursor: pointer;
     }
     .online-players-list-btn.online{
       background-color: $bg-blue;
       color: $text-blue;
+      cursor: pointer;
     }
     .online-players-list-btn.playing{
       background-color: $bg-grey;

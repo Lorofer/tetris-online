@@ -1,16 +1,16 @@
-import {ref, computed} from 'vue'
+import {ref} from 'vue'
 import {defineStore} from 'pinia'
+import {useApiStore} from "@/stores/apiStore";
 
 export const usePlayersStore = defineStore('players', () => {
+    const apiStore = useApiStore();
+
     const playersObj = ref([]);
 
-    const onlinePlayers =
-        computed(() => playersObj.value.filter(player => player['status'] != "offline"));
-
     (async function getData() {
-        let resp = await fetch('http://localhost:3000/players');
+        let resp = await fetch(`${apiStore.api}users?status_ne=offline`);
         playersObj.value = await resp.json();
     })();
 
-    return {onlinePlayers}
+    return {playersObj}
 });
