@@ -1,30 +1,24 @@
 <script setup lang="ts">
 import {ref} from "vue";
 
-import {useApiStore} from "@/stores/apiStore";
 import {usePopupsStore} from "@/stores/popupsStore";
-const apiStore = useApiStore();
+import {useUserStore} from "@/stores/userStore";
 const popupsStore = usePopupsStore();
+const userStore = useUserStore();
 
 const nickname = ref('');
 const email = ref('');
 const password = ref('');
 
 async function signUp(){
-  try{
-    await fetch(`${apiStore.api}register`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        "nickname": nickname.value,
-        "email": email.value,
-        "password": password.value
-      })
-    });
+  try {
+    userStore.nickname = nickname.value;
+    userStore.email = email.value;
+    userStore.password = password.value;
+    await userStore.signUp();
   } catch (err) {
-    console.log(err);
+    alert('Не удалось зарегистрироаться. Повторите попытку');
+    console.error(err);
   }
 }
 </script>

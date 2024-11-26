@@ -8,7 +8,7 @@ async function foo(){}
 <template>
 <div class="online-players-container">
   <div class="online-players-header">
-    <img src="@/assets/online-players.svg" alt="">
+    <img src="../../public/online-players.svg" alt="">
     <p>Игроки онлайн</p>
   </div>
   <ul class="online-players-list">

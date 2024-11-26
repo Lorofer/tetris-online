@@ -5,25 +5,28 @@
       "password": "$2a$10$clxzhYdgQttwdG7dIEa2kOPuycyD5eX8zpzcp24DQCtw.c1afk1b2",
       "nickname": "nickname.value",
       "id": 1,
-      "status": "online"
+      "status": "offline"
     },
     {
       "email": "qwer@qw.er",
       "password": "$2a$10$jSMmSHXVyuVtjmCaWcS4WO.T4JmgPn3FwkXXP/r7N.1jd5y5IoriS",
       "nickname": "qwer",
-      "id": 2
+      "id": 2,
+      "status": "online"
     },
     {
       "email": "qwerty@qw.er",
       "password": "$2a$10$vfatMQi7ewKeqNZ9eLzgD.yWlUK5GejJaq9wgxRLdvKtXaKf59nDS",
       "nickname": "qwerty123",
-      "id": 3
+      "id": 3,
+      "status": "online"
     },
     {
       "email": "qwerty@mail.ru",
       "password": "$2a$10$AihGabE178euFPa5gnpHteGfA6VPmB.8WJCnktRM7yGAta8fHD2B2",
       "nickname": "lorofer",
-      "id": 4
+      "id": 4,
+      "status": "online"
     }
   ]
 }
