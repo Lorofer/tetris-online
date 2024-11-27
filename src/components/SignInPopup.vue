@@ -70,7 +70,7 @@ function switchPasswordVisibility(event: Event) {
       >
       <div class="password-input-container">
         <img
-            v-if="isPasswordHidden" @click="switchPasswordVisibility"
+            v-if="!isPasswordHidden" @click="switchPasswordVisibility"
             class="hide password-icon" src="@/../public/hide.png" alt=""
         >
         <img
@@ -79,7 +79,7 @@ function switchPasswordVisibility(event: Event) {
         >
         <input
             @input="successful = true" ref="sign-in-password-input"
-            :class="[{'error': !successful}, 'sign-in-input', 'sign-in-password-input']"
+            :class="[{'error': !successful}, 'sign-in-input', 'password-input']"
             v-model.trim="password" placeholder="Пароль" type="password" required
         >
       </div>
@@ -165,7 +165,7 @@ function switchPasswordVisibility(event: Event) {
   position: relative;
 }
 
-.sign-in-password-input {
+.password-input {
   padding: 12px 50px 12px 17px;
 }
 
