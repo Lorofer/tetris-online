@@ -28,8 +28,11 @@ export const useUserStore = defineStore('user', () => {
                 throw new Error('Bad Request');
             }
             let obj = await resp.json();
+
+            isAuthorisation.value = true;
             localStorage.setItem("token", await obj['accessToken']);
         } catch (err) {
+            isAuthorisation.value = false;
             throw err;
         }
     }
@@ -50,11 +53,17 @@ export const useUserStore = defineStore('user', () => {
                 throw new Error('Bad Request');
             }
             let obj = await resp.json();
+
+            isAuthorisation.value = true;
             localStorage.setItem("token", await obj['accessToken']);
         } catch(err) {
+            isAuthorisation.value = false;
             throw err;
         }
     }
 
-    return {nickname, email, password, signIn, signUp};
+    return {
+        nickname, email, password, isAuthorisation,
+        signIn, signUp
+    };
 });

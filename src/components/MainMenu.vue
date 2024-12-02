@@ -1,9 +1,23 @@
+<script setup lang="ts">
+import {useUserStore} from "@/stores/userStore";
+const userStore = useUserStore();
+
+function foo(){
+  alert('a');
+}
+</script>
+
 <template>
 <div class="menu-container">
-  <RouterLink class="button" to="/pvp">Играть 1 vs 1</RouterLink>
-  <RouterLink class="button" to="/single-player">Одиночная игра</RouterLink>
+  <RouterLink class="main-menu-button" to="/pvp">Играть 1 vs 1</RouterLink>
+  <RouterLink class="main-menu-button" to="/single-player">Одиночная игра</RouterLink>
   <span class="separator"></span>
-  <button class="button" @click="$emit('open-popup')">Войти</button>
+  <button
+      v-if="!userStore.isAuthorisation" @click="$emit('open-popup')"
+      class="main-menu-button">Войти</button>
+  <button
+      v-else @click="foo"
+      class="main-menu-button">Профиль</button>
 </div>
 </template>
 
@@ -18,12 +32,12 @@
   padding: 48px;
   border-radius: 24px;
 }
-.button{
+.main-menu-button{
   @include menu-button;
   background-color: $bg-blue;
   color: $text-blue;
 }
-.button:first-child{
+.main-menu-button:first-child{
   background-color: $bg-orange;
   color: $text-beige;
   font-weight: 300;
